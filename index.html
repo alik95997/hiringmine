@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +25,6 @@
       <div class="logo-div">
         <a href=""><img src="./images/Hiring Mine Logo-453a72d3.png" alt="" /></a>
       </div>
-      
       <div class="nav-menu">
         <ul>
           <li><a href="">About Us</a></li>
@@ -27,13 +32,15 @@
           <li><a href="">Jobs</a></li>
           <li><a href="">Login</a></li>
           <li><a href="">Join Now</a></li>
-          <li><a href="">Employee / Post Job</a></li>
-          
+          <li><a style="color: #6158FF" href="">Employee / Post Job</a></li>
         </ul>
       </div>
-      <div class="toggle-theme">
-        <i>Toggle</i>
+      
+      <div class="toggle">
+        <i class="fas fa-bars" id="toggle-btn"></i>
       </div>
+
+
     </section>
 
     <section class="hero-section">
@@ -95,7 +102,7 @@
         <div class="carousel-inner">
           <!-- Slide 1 -->
           <div class="carousel-item active">
-            <div class="cards-wrapper">
+            <div class="cards-wrapper" >
               <!-- Card 1 -->
               <div class="card card-body ">
                 <div class="first">
@@ -321,23 +328,23 @@
     <section class="stepBoxParent">
       <div class="stepBox">
         <i class="fa-solid fa-user"></i>
-        <h6>Create an Account</h6>
+        <p>Create an Account</p>
         <p>Join our vibrant community. Create your account and unlock boundless opportunities.
         </p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <h6>Search a Job</h6>
+        <p>Search a Job</p>
         <p>Discover your ideal job. Our intuitive search feature makes job hunting effortless.</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-file"></i>
-        <h6>Upload CV/Resume</h6>
+        <p>Upload CV/Resume</p>
         <p>Showcase your expertise. Upload your CV or resume and stand out to employers.</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-briefcase"></i>
-        <h6>Get a Job</h6>
+        <p>Get a Job</p>
         <p>Achieve your career goals. Apply for jobs and embark on your next adventure.</p>
       </div>
     </section>
@@ -363,22 +370,22 @@
     <section class="stepBoxParent">
       <div class="stepBox">
         <i class="fa-solid fa-user"></i>
-        <h6>Marketing & Sales</h6>
+        <p>Marketing & Sales</p>
         <p>569 Jobs</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <h6>Development</h6>
+        <p>Development</p>
         <p>378 Jobs</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-file"></i>
-        <h6>Art & Illustration</h6>
+        <p>Art & Illustration</p>
         <p>154 Jobs</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-briefcase"></i>
-        <h6>Animation</h6>
+        <p>Animation</p>
         <p>90 Jobs</p>
       </div>
     </section>
@@ -386,28 +393,28 @@
     <section class="stepBoxParent">
       <div class="stepBox">
         <i class="fa-solid fa-user"></i>
-        <h6>Management</h6>
+        <p>Management</p>
         <p>74 Jobs</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <h6>Information Tech</h6>
+        <p>Information Tech</p>
         <p>74 Jobs</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-file"></i>
-        <h6>HR & Finance</h6>
+        <p>HR & Finance</p>
         <p>68 Jobs</p>
       </div>
       <div class="stepBox">
         <i class="fa-solid fa-briefcase"></i>
-        <h6>UX/ UI Design</h6>
+        <p>UX/ UI Design</p>
         <p>52 Jobs</p>
       </div>
     </section>
 
     <section class="another-hero">
-      <div>
+      <div class="another-hero-frame">
         <div><img src="./images/frame1.png" alt=""></div>
         <div class="lat-Job-hdng">
           <h3 class="h1 h-sm-2 h-md-3 h-lg-4">
@@ -415,7 +422,10 @@
           </h3>
         </div>
       </div>
-      <div>
+      <div class="separate-frame">
+
+      </div>
+      <div class="another-hero-frame">
         <div><img src="./images/frame2.png" alt=""></div>
         <div class="lat-Job-hdng">
           <h3 class="h1 h-sm-2 h-md-3 h-lg-4">
@@ -439,18 +449,20 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="contact-footer">
         <p>Contact Us</p>
         <p>portal.hiringmine@gmail.com</p>
       </div>
     </div>
+    <div class="separate">
 
-  <div class="bottom-footer">
-    <p>Privacy Policy Terms and Condition</p>
-    <p>Copyright HiringMine 2024. All Rights Reserved</p>
-  </div>  
+    </div>
+    <div class="bottom-footer">
+      <p>Privacy Policy Terms and Condition</p>
+      <p>Copyright HiringMine 2024. All Rights Reserved</p>
+    </div>
   </footer>
-  
+  <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
