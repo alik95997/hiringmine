@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto';
+
 }
 
 main {
@@ -14,10 +15,10 @@ main {
 }
 
 .navbar {
+  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 22px 24px;
   align-items: center;
 }
 
@@ -26,21 +27,60 @@ main {
 }
 
 .nav-menu ul {
+  margin-top: 10px;
+  margin-bottom: 1rem;
   display: flex;
   list-style: none;
   gap: 16px;
-  align-items: center;
 }
 
 .nav-menu ul li a {
   text-decoration: none;
-  font-weight: 600;
   color: #333;
   transition: color 0.3s ease-in-out;
 }
 
+
+
 .nav-menu ul li a:hover {
   color: #007bff;
+}
+
+#toggle-btn {
+  display: none;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  .nav-menu ul {
+    background-color: #f9f9f9;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu ul li a {
+    display: block;
+  }
+
+  #toggle-btn {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .hero-section {
@@ -60,6 +100,7 @@ main {
   margin: 0 auto;
   text-align: center;
   font-size: clamp(3.5rem, 5vw, 4.5rem);
+
   font-weight: 800;
   line-height: 1.2;
   background: linear-gradient(106.43deg, #522fd4, #6bdcff 95.12%);
@@ -71,7 +112,7 @@ main {
 .hero-section p {
   width: 100%;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   max-width: 800px;
   text-align: center;
@@ -90,6 +131,9 @@ main {
   background: transparent;
   box-sizing: border-box;
   padding: 8px 12px;
+  background-image: url('https://www.hiringmine.com/assets/UserVector-dcdef637.svg');
+  background-position: 98%;
+  background-repeat: no-repeat;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
@@ -129,6 +173,23 @@ main {
   padding: 7px 10px;
 }
 
+.hero-image {
+  width: 100vw;
+  position: relative;
+  max-width: 100vw;
+  margin-left: -7vw;
+}
+
+@media screen and (max-width:768px) {
+  .hero-image {
+    width: 100vw;
+    position: relative;
+    max-width: 100vw;
+
+    margin-left: -9vw;
+  }
+}
+
 .hero-image img {
   width: 100%;
   height: auto;
@@ -145,6 +206,7 @@ main {
 
 .lat-Job-hdng p {
   width: 70%;
+  color: #313131;
   text-align: center;
   font-size: 20px;
   font-weight: 400;
@@ -155,11 +217,11 @@ main {
 }
 
 .lat-Job-hdng h3 span:last-child {
-  color: black;
+  color: #3F3F3F;
 }
 
 .lat-Job-hdng h3 span {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -212,16 +274,6 @@ main {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .hero-section h1 {
     font-size: 2rem;
     /* Smaller text for mobile */
@@ -273,7 +325,7 @@ main {
 
 /* Styling for the cards themselves */
 .card {
-  width: 18rem;
+  min-width: 18rem !important;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -292,8 +344,14 @@ main {
 .carousel-inner {
   position: relative;
   /* Make it a positioning context for absolute positioning */
-  padding: 0;
+  padding: 50px;
   /* Remove any extra padding */
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    padding: 0px;
+  }
 }
 
 /* Customizing the carousel controls */
@@ -306,7 +364,7 @@ main {
   border-radius: 50%;
   position: absolute;
   /* Absolute positioning to place it on the edges */
-  top: 0;
+  top: 50% !important;
   /* Adjust the buttons to touch the top */
   transform: translateY(0);
   /* Remove vertical centering to make them touch the top */
@@ -343,7 +401,6 @@ main {
 @media (max-width: 768px) {
   .cards-wrapper {
     flex-direction: row;
-
   }
 
   .banner img {
@@ -370,19 +427,22 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   gap: 10px;
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
 
 .stepBox {
-  width: 290px;
-  transition: 0.3s;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  min-height: 220px;
-  gap: 15px;
+  justify-content: center;
+  gap: 10px;
+  width: 290px;
+  transition: 0.3s ease-in-out;
+  height: 220px;
+  align-items: center;
   border-radius: 24px;
   text-align: center;
   background: linear-gradient(180deg, #edebff, hsla(0, 0%, 100%, 0));
@@ -390,10 +450,20 @@ main {
   padding: 40px;
 }
 
-.stepBox h6,
+.stepBox p,
 i {
+  font-size: 16px;
   font-weight: bold;
   color: #6158ff;
+}
+
+.stepBox p:nth-child(1),
+.stepBox p:nth-child(2) {
+  font-size: 18px;
+}
+
+.stepBox p:nth-child(3) {
+  font-weight: normal;
 }
 
 .stepBox:hover {
@@ -403,12 +473,32 @@ i {
 .another-hero {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2em;
 }
 
+.another-hero-frame {
+  width: 40%;
+}
+
+.separate-frame {
+  width: 2px;
+  height: 200px;
+  background-color: #6158ff;
+}
+
+@media (max-width: 768px) {
+  .separate-frame {
+    display: none;
+  }
+
+  .another-hero-frame {
+    width: 100%;
+  }
+}
+
 .another-hero h3 {
-  width: 90%;
+  width: 100%;
   text-align: start;
 }
 
@@ -421,7 +511,6 @@ footer {
   width: 100%;
   color: white;
   background: linear-gradient(180deg, #4d3bdb 0%, #9747ff 100%);
-  padding: 80px 80px 0px 80px;
 
 }
 
@@ -430,7 +519,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  padding: 80px 80px 0px 80px;
 }
 
 .footer-first {
@@ -438,7 +527,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .footer img {
@@ -447,16 +535,15 @@ footer {
 
 .footer i {
   color: white;
-  margin: 0px 10px;
-  font-size: 1em;
+  margin: 0px 20px;
+  font-size: 2em;
 }
 
 .bottom-footer {
-
+  width: 100%;
   display: flex;
   flex-direction: column;
-
-  /* justify-content: center; */
+  justify-content: center;
   text-align: center;
 }
 
@@ -464,16 +551,6 @@ footer {
 
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .cards-wrapper {
     grid-template-columns: 1fr;
   }
@@ -503,12 +580,30 @@ footer {
 
   .footer {
     justify-content: center;
-
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 80px 80px 20px 20px;
+    gap: 20px;
   }
 
   .footer-first {
     width: 100%;
   }
+
+  .contact-footer {
+    width: 100%;
+  }
+}
+
+.contact-footer p:nth-child(1) {
+  font-weight: bold;
+}
+
+.separate {
+  width: 100%;
+  background-color: #fff;
+  height: 1px;
+  margin: 10px 0px;
+  border: none;
 }
