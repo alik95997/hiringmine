@@ -1,8 +1,7 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+const toggleBtn = document.getElementById('toggle-btn');
+const navMenu = document.querySelector('.nav-menu ul');
+
+toggleBtn.addEventListener('click', () => {
+  navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+});
+
