@@ -26,7 +26,7 @@ const fetchApiForCarousel = async () => {
               <p>${job.payRangeStart} - ${job.payRangeEnd} </p>
             </div>
             <div class="company-logo">
-              <img src="monly.png" alt="Company Logo" />
+              <img src="./monly.png" alt="Company Logo" />
             </div>
           </div>
           <div class="second">
