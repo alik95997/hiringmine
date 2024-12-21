@@ -32,6 +32,7 @@ main {
   display: flex;
   list-style: none;
   gap: 16px;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-menu ul li a {
@@ -39,8 +40,6 @@ main {
   color: #333;
   transition: color 0.3s ease-in-out;
 }
-
-
 
 .nav-menu ul li a:hover {
   color: #007bff;
@@ -66,6 +65,7 @@ main {
     display: none;
     flex-direction: column;
     text-align: center;
+
   }
 
   .nav-menu ul li {
@@ -100,7 +100,6 @@ main {
   margin: 0 auto;
   text-align: center;
   font-size: clamp(3.5rem, 5vw, 4.5rem);
-
   font-weight: 800;
   line-height: 1.2;
   background: linear-gradient(106.43deg, #522fd4, #6bdcff 95.12%);
@@ -185,7 +184,6 @@ main {
     width: 100vw;
     position: relative;
     max-width: 100vw;
-
     margin-left: -9vw;
   }
 }
@@ -428,9 +426,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 30px 10px;
   margin-bottom: 50px;
   flex-wrap: wrap;
+  
 }
 
 .stepBox {
