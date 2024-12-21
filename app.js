@@ -6,8 +6,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 let cardsWrapperElement = document.getElementById("cards-wrapper");
-
-const fetchApi = async () => {
+const fetchApiForCarousel = async () => {
   try {
     const response = await fetch("https://backend-prod.app.hiringmine.com/api/jobAds/all?limit=10&pageNo=1&keyWord=&category=&isPending=false");
     const product = await response.json();
@@ -22,7 +21,7 @@ const fetchApi = async () => {
         <div class="card card-body">
           <div class="first">
             <div class="company-details">
-              <p>${job.companyName || "Anonymous"} </p>
+              <p>${job.companyName} </p>
               <p>${job.designation || "Anonymous"}</p>
               <p>${job.payRangeStart} - ${job.payRangeEnd} </p>
             </div>
@@ -61,22 +60,15 @@ const fetchApi = async () => {
         </div>
       `;
     });
-
-   
-
-
   } catch (error) {
     console.error("Error fetching data:", error);
     cardsWrapperElement.innerHTML = "<p>Error fetching job postings.</p>";
   }
 };
 
-fetchApi();
+fetchApiForCarousel();
 
 // Set carousel to change every 2 seconds
-// $('#carouselExampleControls').carousel({
-//   interval: 2000 // Slide every 2 seconds
-// });
 
 
 let stepBoxParentElement = document.getElementById("stepBoxParent");
